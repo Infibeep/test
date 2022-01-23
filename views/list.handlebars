@@ -1,0 +1,68 @@
+<body>
+<div class="textBox">
+<h1> Kinetics </h1>
+
+{{#if data}}
+<div style="max-width: 100%; height:600px; overflow: auto;">
+    <table>
+      <thead>
+<tr>
+    <th>Id</th>
+    <th>ec_number</th>
+    <th>substrate</th>
+    <th>value</th>
+    <th>parameters </th>
+    <th>uniprot </th>
+    <th>organism</th>
+    <th>reaction </th>
+    <th>pubmed </th>
+    <th>commentary </th>
+    <th>temperature </th>
+    <th>pH </th>
+    <th>variant_kinetics </th>
+    <th>unit </th>
+    <th>source </th>
+    <th>ec_1 </th>
+    <th>ec_2 </th>
+    <th>ec_3 </th>
+    <th>ec_4 </th>
+    <th>mutation_class </th>
+    <th>mutation_kcat_desc </th>
+</tr>
+ </thead>
+      <tbody>
+{{#each data}}
+<tr>
+    <td>{{this._id}}</td>
+    <td>{{this.ec_number}}</td>
+    <td>{{this.substrate_kinetics}}</td>
+    <td>{{this.value}}</td>
+    <td>{{this.parameters}}</td>
+    <td>{{this.uniprot}}</td>
+    <td>{{this.organism }}</td>
+    <td>{{this.reaction}}</td>
+    <td>{{this.pubmed}}</td>
+    <td>{{this.commentary}}</td>
+    <td>{{this.temperature}}</td>
+    <td>{{this.pH}}</td>
+    <td>{{this.variant_kinetics}}</td>
+    <td>{{this.unit}}</td>
+    <td>{{this.source}}</td>
+    <td>{{this.ec_1}}</td>
+    <td>{{this.ec_2}}</td>
+    <td>{{this.ec_3}}</td>
+    <td>{{this.ec_4}}</td>
+    <td>{{this.mutation_class}}</td>
+    <td>{{this.mutation_kcat_desc}}</td>
+</tr>
+{{/each}}
+ </tbody>
+    </table>
+  </div>
+{{else}}
+<br>
+<br>
+<h4>No documents found<h4>
+{{/if}}
+</div>
+</body>
